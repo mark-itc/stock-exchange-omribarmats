@@ -30,8 +30,18 @@ ul {
 
 a {
     color: #17A2B8;
+    text-decoration: none;
 }
 
 a:hover {
     color: #17A2B8;
+}
+
+.loader {
+    width: 50rem;
+    height: 50rem;
+}
+
+.loadingSpot {
+    position: relative;
 }

@@ -22,7 +22,7 @@ async function getInstruments(url) {
             let name = item.name;
             let symbol = item.symbol;
 
-            searchResults.innerHTML += `<li><a href=/company.html?symbol=${symbol}>${name} (${symbol})</a></li>`;
+            searchResults.innerHTML += `<li><a href=company.html?symbol=${symbol} target="popup" onclick="window.open('company.html?symbol=${symbol}','popup','width=800,height=600')">${name} (${symbol})</a></li>`;
         });
     }
     catch (err) {
@@ -36,3 +36,4 @@ function showResults() {
     document.body.appendChild(resultsclon, resultsclon);
     document.getElementById("searchResults").innerHTML = "";
 }
+
