@@ -44,6 +44,6 @@ async function getInstrumentsData (symbol) {
     let companyName = result.profile.companyName;
     let priceChange = result.profile.changesPercentage;
     
-    searchResults.innerHTML += `<li><a href=company.html?symbol=${symbol} target="popup" onclick="window.open('company.html?symbol=${symbol}','popup','width=800,height=600')"><img src=${image} width="20px" alt=""> ${companyName} (${symbol})<b> ${priceChange} %</b></a></li>`
+    searchResults.innerHTML += `<li><a href=company.html?symbol=${symbol} target="popup" onclick="window.open('company.html?symbol=${symbol}','popup','width=800,height=600')"><img src=${image} width="20px" alt=""> ${companyName} (${symbol})<b> ${priceChange}</b></a></li>`
 }
 
