@@ -9,13 +9,11 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="shortcut icon" href="Images\stock_market_website_logo_300_300_v2.png" />
-    <title>Document</title>
+    <title>Stock Exchange</title>
 </head>
 
 <body>
-    <div id="marquee" class="marquee flex-row">
-        <div id="marquee-items" class="marquee-items"></div>
-    </div>
+    <div id="marquee"></div>
     <nav class="navbar navbar-light bg-light">
         <form class="form-inline">
             <a class="navbar-brand" href="#">
@@ -34,5 +32,12 @@
     </template>
     <script src="JS\app.js"></script>
     <script src="JS\marquee.js"></script>
+    
+    <script>
+     (async function () {
+        const marquee = new Marquee(document.getElementById('marquee'));
+        marquee.load()
+    })();
+    </script>
 </body>
 </html>

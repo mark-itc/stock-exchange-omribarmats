@@ -46,7 +46,7 @@ a:hover {
     position: relative;
 }
 
-.marquee {
+.marqueeElement  {
     height: 40px;
     overflow: hidden;
     position: relative;
@@ -57,7 +57,7 @@ a:hover {
 
 }
 
-.marquee-items {
+.marquee {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -69,7 +69,7 @@ a:hover {
     animation: marquee 40s linear infinite;
 }
 
-.marquee-items:hover {
+.marquee:hover {
     -webkit-animation-play-state:paused;
     -moz-animation-play-state:paused;
     -o-animation-play-state:paused;
