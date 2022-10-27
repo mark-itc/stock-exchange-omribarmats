@@ -2,7 +2,7 @@ class SearchResult {
     constructor(element) {
         this.element = element;
         this.createUl()
-        this.baseURL="https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/"
+        this.baseURL = "https://stock-exchange-dot-full-stack-course-services.ew.r.appspot.com/api/v3/company/profile/"
     }
 
     createUl() {
@@ -25,7 +25,7 @@ class SearchResult {
 
     async getData(symbol) {
         try {
-            let url = this.baseURL+symbol;
+            let url = this.baseURL + symbol;
             let response = await fetch(url);
             let result = response.json();
             return result;
@@ -47,6 +47,11 @@ class SearchResult {
         item.setAttribute("target", "popup");
         item.setAttribute("onclick", `window.open('company.html?symbol=${symbol}','popup','width=800,height=600')`);
         item.innerHTML = `(${symbol}) ${companyName}`;
+        let searchTerm = document.getElementById("searchTerm").value;
+        const term = new RegExp(searchTerm, 'gi');
+        item.innerHTML = item.innerHTML.replace(term, function (term) {
+            return `<span class="hl-bg">${term}</span>`;
+        });
         const itemChange = document.createElement("span");
         item.appendChild(itemChange);
         item.insertBefore(itemImage, item.firstChild);
